@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="mportfolio.css">
+   <script src="mouse_event.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">본문 바로가기</a>
@@ -33,11 +34,37 @@
   <!-- 공통 메뉴 -->
   <nav class="tabs" aria-label="페이지 메뉴">
     <ul>
-      <li><a href="index.html">소개</a></li>
-      <li><a href="info.html">인적사항</a></li>
-      <li><a href="project.html" aria-current="page">프로젝트</a></li>
-      <li><a href="career.html">커리어</a></li>
+  <li>
+    <a href="index.html" aria-current="page">소개</a>
+    <ul class="sub">
+      <li><a href="index.html#s-intro">자기소개</a></li>
+      <li><a href="index.html#s-stack">기술 스택</a></li>
     </ul>
+  </li>
+  <li>
+    <a href="info.html">인적사항</a>
+    <ul class="sub">
+      <li><a href="info.html#s-info">인적사항</a></li>
+      <li><a href="info.html#s-edu">학력</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="project.html">프로젝트</a>
+    <ul class="sub">
+      <li><a href="project.html#s-proj">캡스톤 프로젝트</a></li>
+      <li><a href="project.html#s-role">담당 역할</a></li>
+      <li><a href="project.html#s-tech">사용 기술</a></li>
+      <li><a href="project.html#s-cert">자격증</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="career.html">커리어</a>
+    <ul class="sub">
+      <li><a href="career.html#s-learn">교육 이수</a></li>
+      <li><a href="career.html#s-goal">커리어 목표</a></li>
+    </ul>
+  </li>
+</ul>
   </nav>
 
   <div class="wrap page">

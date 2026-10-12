@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="mportfolio.css">
+   <script src="mouse_event.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">본문 바로가기</a>
@@ -33,11 +34,37 @@
   <!-- 공통 메뉴 -->
   <nav class="tabs" aria-label="페이지 메뉴">
     <ul>
-      <li><a href="index.html" aria-current="page">소개</a></li>
-      <li><a href="info.html">인적사항</a></li>
-      <li><a href="project.html">프로젝트</a></li>
-      <li><a href="career.html">커리어</a></li>
+  <li>
+    <a href="index.html" aria-current="page">소개</a>
+    <ul class="sub">
+      <li><a href="index.html#s-intro">자기소개</a></li>
+      <li><a href="index.html#s-stack">기술 스택</a></li>
     </ul>
+  </li>
+  <li>
+    <a href="info.html">인적사항</a>
+    <ul class="sub">
+      <li><a href="info.html#s-info">인적사항</a></li>
+      <li><a href="info.html#s-edu">학력</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="project.html">프로젝트</a>
+    <ul class="sub">
+      <li><a href="project.html#s-proj">캡스톤 프로젝트</a></li>
+      <li><a href="project.html#s-role">담당 역할</a></li>
+      <li><a href="project.html#s-tech">사용 기술</a></li>
+      <li><a href="project.html#s-cert">자격증</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="career.html">커리어</a>
+    <ul class="sub">
+      <li><a href="career.html#s-learn">교육 이수</a></li>
+      <li><a href="career.html#s-goal">커리어 목표</a></li>
+    </ul>
+  </li>
+</ul>
   </nav>
 
   <div class="wrap page">
@@ -46,7 +73,10 @@
       <section aria-labelledby="s-intro">
         <h2 id="s-intro">자기소개</h2>
         <div class="intro">
-          <img class="photo" src="images/profile.jpg" alt="장민석 증명사진" width="314" height="472">
+  <span class="photo-box">
+    <img class="photo" src="images/profile.jpg" alt="장민석 프로필 사진">
+    <img class="photo p-alt" src="images/photo-hover.jpg" alt="" aria-hidden="true">
+  </span>
           <p>장안대학교 컴퓨터공학과에 재학 중인 주니어 AI 개발자입니다. 캡스톤 프로젝트에서 실시간 수어 번역 안드로이드 앱의 백엔드와 데이터베이스를 맡아 클라이언트-서버 통신과 데이터 설계를 주도했습니다.</p>
           <p>표준화된 데이터 위에 AI를 얹어, 설비가 스스로 판단하고 움직이는 자율형 시스템을 만드는 개발자로 성장하는 것이 목표입니다.</p>
         </div>

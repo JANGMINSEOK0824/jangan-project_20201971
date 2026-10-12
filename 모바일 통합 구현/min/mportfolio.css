@@ -811,3 +811,89 @@ tr:last-child td {
     transition: none !important;
   }
 }
+
+  /* ---------- 마우스 이벤트 효과 ---------- */
+.chips li {
+  transition: transform 0.15s, background-color 0.15s;
+}
+.chips li.is-hover {
+  transform: translateY(-2px);
+  background: var(--accent);
+  color: #04231b;
+}
+.photo {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.photo.is-hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+/* ---------- 메뉴 드롭다운 ---------- */
+.tabs > ul > li {
+  position: relative;
+}
+
+.tabs .sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 9.5em;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  z-index: 20;
+}
+
+.tabs .sub a {
+  padding: 9px 12px;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-bottom: 0;
+  border-radius: 8px;
+}
+
+.tabs .sub a:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.tabs > ul > li:hover > .sub,
+.tabs > ul > li:focus-within > .sub {
+  display: block;
+}
+
+/* 오른쪽 두 메뉴는 화면 밖으로 안 나가게 오른쪽 정렬 */
+.tabs > ul > li:nth-last-child(-n + 2) > .sub {
+  left: auto;
+  right: 0;
+}
+
+/* ---------- 사진 호버 교체 ---------- */
+.photo-box {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+
+.photo-box .p-alt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.photo-box:hover .p-alt {
+  opacity: 1;
+}
