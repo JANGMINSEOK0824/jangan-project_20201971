@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOTTO 6/45 · 번호 생성기</title>
+  <link rel="stylesheet" href="css/lotto.css">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <p class="eyebrow">LUCKY NUMBER GENERATOR</p>
+      <h1>LOTTO <span>6/45</span></h1>
+    </header>
+
+    <!-- 지금 보이는 번호가 어떤 방식으로 뽑혔는지 표시 -->
+    <p id="mode" class="mode"></p>
+
+    <!-- 뽑힌 번호 공 6개가 들어가는 영역 (비어 있으면 안내 문구 표시) -->
+    <section id="balls" class="balls" aria-live="polite">
+      <p class="placeholder">버튼을 눌러 행운의 번호를 뽑아보세요</p>
+    </section>
+
+    <!-- 생성 횟수 표시 -->
+    <p class="counter">생성 횟수 <strong id="count">0</strong>회</p>
+
+    <div class="actions">
+      <button id="drawBtn" class="btn primary">번호 뽑기</button>
+      <button id="hotBtn" class="btn gold">통계 추천</button>
+      <button id="resetBtn" class="btn ghost">초기화</button>
+    </div>
+
+    <!-- 역대 당첨번호 중 가장 많이 나온 번호 TOP 6 -->
+    <footer class="stats">
+      <p class="stats-title">역대 최다 출현 번호 TOP 6 <span id="statsRange"></span></p>
+      <div id="topList" class="top-list"></div>
+      <p class="note">통계는 재미로 보는 참고 자료예요. 매 회차 모든 번호의 당첨 확률은 똑같습니다.</p>
+    </footer>
+  </main>
+
+  <script src="js/lotto.js"></script>
+</body>
+</html>
