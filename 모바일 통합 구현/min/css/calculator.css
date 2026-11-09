@@ -1,0 +1,13 @@
+body { margin: 0; height: 100vh; display: grid; place-items: center; background: #0f172a; font-family: "Segoe UI", "Malgun Gothic", sans-serif; } /* 화면 가운데 정렬 + 어두운 배경 */
+.calculator { position: relative; width: 300px; padding: 20px; border-radius: 24px; background: #1e293b; box-shadow: 0 20px 60px rgba(0, 0, 0, .5); } /* 계산기 몸통 (고양이 위치 기준점) */
+.calculator::before { content: ""; position: absolute; left: 50%; bottom: 100%; width: 200px; height: 150px; /* 계산기 위쪽 가운데에 고양이 자리 만들기 */
+  background: url("../images/cat.svg") no-repeat center / contain; /* 고양이 그림 넣기 */
+  transform: translate(-50%, 28px); z-index: -1; } /* 아래로 살짝 내려 계산기 뒤에 숨김 → 얼굴만 빼꼼 */
+.screen { height: 80px; margin-bottom: 16px; padding: 0 16px; border-radius: 14px; background: #0f172a; color: #fff; font-size: 34px; display: flex; align-items: center; justify-content: flex-end; overflow: hidden; } /* 숫자가 보이는 화면 (오른쪽 정렬) */
+.buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; } /* 버튼을 4칸씩 격자로 배치 */
+button { height: 60px; border: none; border-radius: 14px; font-size: 22px; color: #fff; background: #334155; cursor: pointer; } /* 숫자 버튼 기본 모양 */
+button:active { transform: scale(.95); } /* 누를 때 살짝 작아지는 효과 */
+.operator { background: #f59e0b; } /* 사칙연산 버튼은 주황색 */
+.clear { background: #ef4444; } /* 초기화 버튼은 빨간색 */
+.equals { background: #22c55e; } /* 결과 버튼은 초록색 */
+.wide { grid-column: span 2; } /* 두 칸 차지하는 넓은 버튼 */
